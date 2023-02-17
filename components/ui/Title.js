@@ -8,9 +8,9 @@ function Title({ children }) {
 }
 // Opponent's Guess
 const styles = StyleSheet.create({
-   text: {
+    text: {
+       fontFamily: 'open-sans-bold',
         fontSize: 24,
-        fontWeight: 'bold',
         color: 'white',
         textAlign: 'center',
         borderWidth: 2,
