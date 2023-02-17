@@ -8,8 +8,7 @@ JS, React, React Native, Expo
 
 1. The Start Game Screen - you need to enter a number that the phone will guess.
 
-
-![Start Game Screen](<img src="https://github.com/VitaKoval/number-game/blob/master/assets/screnshoots/StartGame.png" width="100" heght="200">)
+![Start Game Screen](<https://github.com/VitaKoval/number-game/blob/master/assets/screnshoots/StartGame.png>)
 
 2. To start the game - click confirm!
    If the player entered a number that is greater or less than the range from 1 to 99 - there will be a warning
