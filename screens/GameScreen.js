@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { View, Text, StyleSheet, Alert, FlatList } from "react-native";
+import { View, StyleSheet, Alert, FlatList } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 import NumberContainer from "../components/game/NumberContainer";
@@ -8,8 +8,7 @@ import InstructionText from "../components/ui/InstructionText";
 import PrimaryButton from "../components/ui/PrimaryButton";
 import Title from "../components/ui/Title";
 import GuessLogItem from "../components/game/GuessLogItem";
-import Colors from "../constans/colors";
-import { symbolicateLogLazy } from "react-native/Libraries/LogBox/Data/LogBoxData";
+// import { symbolicateLogLazy } from "react-native/Libraries/LogBox/Data/LogBoxData";
 
 function generateRandomBetween(min, max, exclude) {
   const rndNum = Math.floor(Math.random() * (max - min)) + min;
