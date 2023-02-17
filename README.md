@@ -14,7 +14,6 @@ JS, React, React Native, Expo
    If the player entered a number that is greater or less than the range from 1 to 99 - there will be a warning
 
 ![Entered Number](https://github.com/VitaKoval/number-game/blob/master/assets/screnshoots/EnteredNumber.png)
-
 ![Warning](https://github.com/VitaKoval/number-game/blob/master/assets/screnshoots/Warning.png)
 
 3. The phone randomly guesses a number and waits for a hint: higher or lower?
@@ -25,4 +24,5 @@ JS, React, React Native, Expo
 
 5. Еhe game over when the phone guesses the number.
    The number of rounds and the number guessed are displayed on the Game Over Screen
+
    ![Game Over Screen](https://github.com/VitaKoval/number-game/blob/master/assets/screnshoots/GameOver.png)
