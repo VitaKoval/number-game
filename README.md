@@ -19,7 +19,8 @@ JS, React, React Native, Expo
 3. The phone randomly guesses a number and waits for a hint: higher or lower?
    ![Game Screen](https://github.com/VitaKoval/number-game/blob/master/assets/screnshoots/GameScreen.png)
 
-4. if the player cheats - a warning about it
+4. if the player cheats - a warning about it.
+
    ![Warning don't lie](https://github.com/VitaKoval/number-game/blob/master/assets/screnshoots/WarningDon'tLie.png)
 
 5. Еhe game over when the phone guesses the number.
