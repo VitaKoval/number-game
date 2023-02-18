@@ -6,7 +6,8 @@ function Title({ children }) {
         <Text style={styles.text}>{children}</Text>
     )
 }
-// Opponent's Guess
+export default Title; 
+
 const styles = StyleSheet.create({
     text: {
        fontFamily: 'open-sans-bold',
@@ -16,7 +17,8 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: 'white',
         padding: 12,
+        maxWidth: "80%",
+        width: 300,
     }
 })
 
-export default Title;

@@ -1,17 +1,22 @@
-import { Text, StyleSheet, View } from "react-native";
+import { Text, StyleSheet, View, useWindowDimensions } from "react-native";
 import Colors from "../../constans/colors";
 
 function Card({ children }) {
+  const { width } = useWindowDimensions();
+
+  // styles depend on window width/height
+  const marginTopDistance = width < 380 ? 18 : 36;
+
     return (
-        <View style={styles.card}>{children}</View>
+        <View style={[styles.card, {marginTopDistance}]}>{children}</View>
     )
 }
-// Opponent's Guess
+export default Card;
+
 const styles = StyleSheet.create({
    card: {
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 36,
     marginHorizontal: 24,
     padding: 16,
     backgroundColor: Colors.primary800,
@@ -24,4 +29,3 @@ const styles = StyleSheet.create({
   },
 })
 
-export default Card;

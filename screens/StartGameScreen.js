@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, Alert } from "react-native";
+import { StyleSheet, Text, View, TextInput, Alert, Dimensions, useWindowDimensions } from "react-native";
 import { useState } from "react";
 import Title from "../components/ui/Title";
 import Card from "../components/ui/Card";
@@ -8,6 +8,7 @@ import InstructionText from "../components/ui/InstructionText";
 
 function StartGameScreen({ onPickedNumber }) {
   const [enteredNumber, setEnteredNumber] = useState("");
+  const {height} = useWindowDimensions();
 
   function numberInputHandler(enteredText) {
     setEnteredNumber(enteredText);
@@ -37,8 +38,11 @@ function StartGameScreen({ onPickedNumber }) {
     onPickedNumber(chosenNamber);
   }
 
+  // styles depend on window width/height
+  const marginTopDistance = height < 430 ? 30 : 100;
+
   return (
-    <View style={styles.rootContainer}>
+    <View style={[styles.rootContainer, {marginTop: marginTopDistance}]}>
       <Title>Guess my number</Title>
       <Card>
         <InstructionText>Enter a Number</InstructionText>
@@ -62,30 +66,17 @@ function StartGameScreen({ onPickedNumber }) {
   );
 }
 
+export default StartGameScreen;
+
+const deviceHeight = Dimensions.get('window').height;
+console.log('deviceHeight', deviceHeight);
+
 const styles = StyleSheet.create({
   rootContainer: {
     flex: 1,
-    marginTop: 100,
+    // marginTop: deviceHeight < 430 ? 30 : 100,
     alignItems: 'center',
   },
-  // instructionText: {
-  //   color: Colors.accent500,
-  //   fontSize: 24,
-  // },
-  // inputContainer: {
-  //   justifyContent: "center",
-  //   alignItems: "center",
-  //   marginTop: 36,
-  //   marginHorizontal: 24,
-  //   padding: 16,
-  //   backgroundColor: Colors.primary800,
-  //   borderRadius: 8,
-  //   elevation: 4,
-  //   shadowColor: "black",
-  //   shadowOffset: { width: 0, height: 2 },
-  //   shadowRadius: 6,
-  //   shadowOpacity: 0.25,
-  // },
   numberInput: {
     height: 50,
     width: 50,
@@ -104,5 +95,3 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-
-export default StartGameScreen;
