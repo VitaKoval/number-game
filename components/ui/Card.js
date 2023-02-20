@@ -8,7 +8,7 @@ function Card({ children }) {
   const marginTopDistance = width < 380 ? 18 : 36;
 
     return (
-        <View style={[styles.card, {marginTopDistance}]}>{children}</View>
+        <View style={[styles.card, {marginTop: marginTopDistance}]}>{children}</View>
     )
 }
 export default Card;

@@ -4,16 +4,17 @@ import Title from "../components/ui/Title";
 import Colors from "../constans/colors";
 
 function GameOverScreen({ userNumber, roundsNumber, onStartNewGame }) {
-    const { width } = useWindowDimensions();
+    const { width, height } = useWindowDimensions();
 
     // styles depend on window width/height
-    const imageDimensions = width < 380 ? 150 : 350;
-    const borderRadiusDimensions = width < 380 ? 75 : 175;
+    const imageDimensions = height < 480 ? 150 : 350;
+    const marginImageDimensions = height < 480 ? 12 : 36;
+    const borderRadiusDimensions = width < 480 ? 75 : 175;
 
   return (
     <View style={styles.rootContainer}>
       <Title>GAME OVER!</Title>
-      <View style={[styles.imageContainer, {width: imageDimensions, height: imageDimensions, borderRadius: borderRadiusDimensions}]}>
+      <View style={[styles.imageContainer, {width: imageDimensions, height: imageDimensions, borderRadius: borderRadiusDimensions, margin: marginImageDimensions}]}>
         <Image
           style={styles.image}
           source={require("../assets/images/sucsses.png")}
@@ -43,7 +44,6 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: Colors.primary800,
     overflow: "hidden",
-    margin: 36,
   },
   image: {
     width: "100%",
