@@ -1,4 +1,4 @@
-// import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from 'expo-status-bar';
 import { useState} from "react";
 import { StyleSheet, ImageBackground, SafeAreaView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
@@ -43,6 +43,8 @@ const [fontsLoaded] = useFonts({
   }
 
   return (
+    <>
+    <StatusBar style='light'/>
     <LinearGradient colors={[Colors.primary700, Colors.accent500]} style={styles.rootScreen}>
       <ImageBackground
         source={require("./assets/images/background.png")}
@@ -56,7 +58,8 @@ const [fontsLoaded] = useFonts({
           {(gameIsOver && userNumber) && <GameOverScreen userNumber={userNumber} roundsNumber={guessRounds} onStartNewGame={startNewGameHandler} />}
         </SafeAreaView>
       </ImageBackground>
-    </LinearGradient>
+      </LinearGradient>
+      </>
   );
 }
 
